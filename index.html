@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>topselling.com — Premium Domain For Sale</title>
+  <meta name="description" content="topselling.com — premium domain ideal for ecommerce best-seller lists, curated shops, product recommendation engines, affiliate hubs and retail marketplaces. Submit an offer to purchase." />
+  <meta property="og:title" content="topselling.com — Premium Domain For Sale" />
+  <meta property="og:description" content="topselling.com — premium domain for curated marketplaces, product discovery, affiliate storefronts and editorial 'best of' platforms. Contact domain@topselling.com" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffcf6b" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:1120px;
+      --panel-width:760px;
+      --muted:#6b7b84;
+      --accent-warm:#ffb84d;   /* warm highlight */
+      --accent-cool:#00a6c6;   /* cool teal */
+      --text:#062427;
+      --bg-top:#fffaf6;
+      --bg-bottom:#f2fbff;
+      --card:#ffffff;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 20px;
+      color:var(--text);
+      background:
+        radial-gradient(900px 360px at 12% 12%, rgba(0,166,198,0.03), transparent 12%),
+        radial-gradient(900px 360px at 88% 78%, rgba(255,184,77,0.03), transparent 12%),
+        linear-gradient(180deg,var(--bg-top) 0%, var(--bg-bottom) 100%);
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    /* Chosen look: curated commerce showcase
+       - warm editorial spotlight behind content
+       - mosaic of product-card silhouettes as background texture
+       - animated "badge" and product silhouette accents to convey best-sellers
+    */
+    .bg {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .mosaic {
+      position:fixed;
+      left:5%;
+      top:6%;
+      width:1100px;
+      height:420px;
+      z-index:0;
+      pointer-events:none;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1100 420'><g fill='none' stroke='%23000000' stroke-opacity='0.035' stroke-width='1.4'><rect x='24' y='56' width='160' height='120' rx='8'/><rect x='208' y='32' width='200' height='140' rx='8'/><rect x='428' y='68' width='180' height='120' rx='8'/><rect x='628' y='28' width='220' height='160' rx='8'/><rect x='868' y='64' width='160' height='120' rx='8'/></g></svg>");
+      background-repeat:no-repeat;
+      background-size:cover;
+      opacity:0.85;
+      mix-blend-mode:multiply;
+      transform:translateZ(0);
+      filter: blur(0.6px);
+    }
+
+    .spot {
+      position:fixed;
+      left:50%;
+      top:12%;
+      width:960px;
+      height:420px;
+      transform:translateX(-50%);
+      z-index:0;
+      pointer-events:none;
+      background: radial-gradient(closest-side, rgba(255,184,77,0.06), transparent 36%);
+      filter: blur(28px);
+      mix-blend-mode:screen;
+      opacity:0.95;
+    }
+
+    .badges {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .badge {
+      position:absolute;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:800;
+      color:#07121a;
+      background: linear-gradient(90deg,var(--accent-warm), #ffd88a);
+      box-shadow: 0 12px 36px rgba(255,184,77,0.08);
+      font-size:12px;
+      opacity:0.9;
+      transform-origin:center;
+      will-change: transform, opacity;
+    }
+
+    .products {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .product {
+      position:absolute;
+      width:92px;
+      height:92px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      opacity:0.10;
+      filter: drop-shadow(0 12px 28px rgba(6,18,20,0.08));
+      will-change: transform, opacity;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-22px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(-4deg); }
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:36px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,255,0.99));
+      box-shadow: 0 32px 120px rgba(6,18,20,0.06);
+      border: 1px solid rgba(6,18,20,0.03);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:86px;
+      height:86px;
+      border-radius:14px;
+      background: linear-gradient(135deg,var(--accent-cool),var(--accent-warm));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#021217;
+      font-weight:900;
+      font-size:22px;
+      box-shadow: 0 12px 36px rgba(6,18,20,0.08);
+      flex-shrink:0;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    h1{ margin:0; font-size:28px; color:var(--text); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; max-width:760px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      align-items:start;
+      margin-top:10px;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(0,166,198,0.03), rgba(255,184,77,0.02));
+      padding:16px 18px;
+      border-radius:12px;
+      color:var(--text);
+      margin-bottom:16px;
+      border:1px solid rgba(6,18,20,0.03);
+    }
+    .hero p{ margin:0; font-size:15px; color:var(--text); }
+
+    .panel {
+      background: var(--card);
+      color:var(--text);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 10px 34px rgba(6,18,20,0.06);
+      border: 1px solid rgba(6,18,20,0.02);
+      max-width:var(--panel-width);
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--text); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .top-list {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .top-item {
+      width:160px;
+      height:120px;
+      border-radius:10px;
+      background: linear-gradient(180deg,#fff,#f6f9fb);
+      border:1px solid rgba(6,18,20,0.03);
+      box-shadow: 0 8px 26px rgba(6,18,20,0.04);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      font-weight:700;
+      color:var(--muted);
+      padding:12px;
+      font-size:14px;
+    }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent-warm),var(--accent-cool));
+      color:#071217;
+      box-shadow: 0 10px 30px rgba(6,18,20,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(6,18,20,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:12px; font-weight:700; color:var(--text); font-size:16px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,255,0.98));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(6,18,20,0.03);
+      box-shadow: 0 8px 26px rgba(6,18,20,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--text); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent-cool);
+      word-break: normal;
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(6,18,20,0.06);
+      background:#fff;
+      color:var(--text);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:24px; }
+      .logo{ width:72px; height:72px; border-radius:12px; }
+      h1{ font-size:22px; }
+      .mosaic, .spot, .badges, .products { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://topselling.com",
+        "name":"topselling.com",
+        "description":"topselling.com — premium domain for curated marketplaces, bestseller lists, product discovery platforms and affiliate storefronts."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@topselling.com"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="mosaic" aria-hidden="true"></div>
+    <div class="spot" aria-hidden="true"></div>
+    <div class="badges" id="badgesLayer" aria-hidden="true"></div>
+    <div class="products" id="productsLayer" aria-hidden="true"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">TP</div>
+        <div>
+          <h1 id="main-heading">topselling.com</h1>
+          <p class="lead">Premium domain for bestseller lists, curated marketplaces, product discovery and affiliate storefronts.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@topselling.com">domain@topselling.com</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>TopSelling.com immediately communicates curation and commercial credibility — perfect for editorial pick lists, product roundups, recommendation engines, and high-converting affiliate shops.</p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why topselling.com?</h2>
+          <p class="lead">A short, marketable .com that signals consumer trust and product selection. Works well for editorial 'best of' sites, curated storefronts, product recommendation engines, and affiliate marketplaces.</p>
+
+          <div class="top-list" aria-hidden="false">
+            <div class="top-item">Editor's Choice</div>
+            <div class="top-item">Top in Tech</div>
+            <div class="top-item">Hot Right Now</div>
+            <div class="top-item">Best Value</div>
+          </div>
+
+          <div class="features" style="margin-top:14px">
+            <ul>
+              <li>Memorable and commerce-focused — helps conversions and brand recall</li>
+              <li>Fits discovery products, editorial lists, affiliate stores and curated marketplaces</li>
+              <li>Great for newsletters, social promotion, and app store presence</li>
+            </ul>
+
+            <p style="margin-top:12px"><a href="https://corelli.com/domains.html" style="color:var(--accent-cool)">How to Choose A Domain Name</a></p>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@topselling.com?subject=Domain%20Offer%20-%20topselling.com">Email Now</a>
+          </div>
+
+          <div class="price">Domain: topselling.com</div>
+          <div class="muted-small">Serious offers only. Transfer via escrow recommended for secure and trusted transactions.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">TopSelling.com is an ideal asset for founders and teams building commerce-first experiences: curated shops, editorial marketplaces, product guides, affiliate hubs, and discovery engines focused on conversion.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Great for curated storefronts, bestseller lists, and product discovery apps</li>
+            <li>Useful for affiliate networks, editorial roundups, and high-converting landing pages</li>
+            <li>Transfer-ready — escrow recommended to ensure a secure and verifiable transfer</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with details prefilled. Or email <a href="mailto:domain@topselling.com" class="contact-email">domain@topselling.com</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for topselling.com. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@topselling.com" style="color:var(--accent-cool)" class="contact-email">domain@topselling.com</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 topselling.com. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Create drifting badge labels to feel like featured tags
+    (function createBadges(){
+      const layer = document.getElementById('badgesLayer');
+      if(!layer) return;
+      const labels = ['Bestseller','Customers Love','Top Rated','Editor Pick','Trending'];
+      labels.forEach((text, i) => {
+        const el = document.createElement('div');
+        el.className = 'badge';
+        el.textContent = text;
+        el.style.left = (6 + Math.random()*82) + 'vw';
+        el.style.top = (8 + Math.random()*82) + 'vh';
+        el.style.transform = `rotate(${(Math.random()-0.5)*24}deg)`;
+        el.style.opacity = 0.6 + Math.random()*0.35;
+        // animate subtle drifting
+        (function animate(el){
+          const dur = 5000 + Math.random()*8000;
+          function step(){
+            const tx = (Math.random()-0.5) * 16;
+            const ty = (Math.random()-0.5) * 20;
+            const rot = (Math.random()-0.5) * 28;
+            el.style.transition = `transform ${dur}ms ease-in-out, opacity ${dur}ms linear`;
+            el.style.transform = `translate(${tx}px, ${ty}px) rotate(${rot}deg)`;
+            el.style.opacity = 0.5 + Math.random()*0.5;
+            setTimeout(step, dur + Math.random()*1200);
+          }
+          setTimeout(step, Math.random()*1200);
+        })(el);
+        layer.appendChild(el);
+      });
+    })();
+
+    // Create product silhouettes to add texture and motion
+    (function createProducts(){
+      const layer = document.getElementById('productsLayer');
+      if(!layer) return;
+
+      const svgs = [
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'><rect x='10' y='10' width='72' height='72' rx='8' fill='%23FFD36B'/></svg>`),
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'><circle cx='46' cy='46' r='34' fill='%2300A6C6'/></svg>`),
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'><path d='M10 72 L20 20 L72 20 L82 72 Z' fill='%23FFB86B'/></svg>`),
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 92'><rect x='16' y='20' width='60' height='40' rx='6' fill='%2396E0D9'/></svg>`)
+      ];
+
+      const items = [
+        {svg: svgs[0], left:'8%', top:'22%', size:92, delay:0},
+        {svg: svgs[1], left:'72%', top:'14%', size:80, delay:900},
+        {svg: svgs[2], left:'34%', top:'62%', size:100, delay:400},
+        {svg: svgs[3], left:'86%', top:'54%', size:72, delay:1200}
+      ];
+
+      items.forEach((it) => {
+        const el = document.createElement('div');
+        el.className = 'product';
+        el.style.left = it.left;
+        el.style.top = it.top;
+        el.style.width = it.size + 'px';
+        el.style.height = it.size + 'px';
+        el.style.backgroundImage = `url("data:image/svg+xml;utf8,${it.svg}")`;
+        el.style.animation = `floaty ${7000 + Math.random()*9000}ms ease-in-out ${it.delay}ms infinite`;
+        el.style.opacity = 0.06 + Math.random()*0.12;
+        layer.appendChild(el);
+      });
+    })();
+
+    // Mailto composer for the contact form
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - topselling.com');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from topselling.com offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      const mailto = `mailto:domain@topselling.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input').focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - topselling.com');
+        const body = encodeURIComponent('Hi — I would like to make an offer for topselling.com. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@topselling.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
